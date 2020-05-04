@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* look up */
+}
+
+html {
+    //defines what 1 rem is
+    font-size: 62.5%;
+    /* rem is divided by this number so its easier for the remaining
+    font sizes in the body */
+}
+body {
+    box-sizing: border-box;
+}
