@@ -9,6 +9,7 @@
     background-position: top;
     position: relative;
 
+    --webkit--clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
     clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
 
     &__logo-box {
@@ -32,4 +33,6 @@
         that hasn't been positioned otherwise
         to be centered within the box */
     }
+
+
 }
