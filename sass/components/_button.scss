@@ -1,4 +1,5 @@
 .btn {
+    &,
     &:link,
     &:visited { 
         text-transform: uppercase;
@@ -10,22 +11,20 @@
         position: relative;
         font-size: $default-font-size;
     
-        /* look up what transition does
-        transition MUST BE on the initial state*/
+        border: none;
+        cursor: pointer;
     }
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
-        /* look up box-shadow arguments, X, epsilon, blur, color */
         &::after {
-            /* after is used ONLY when button is hovered */
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
-        /* transition must be used on the original element */
         }
     }
-    &:active {
-        /* active is when element is clicked */
+    &:active, 
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
@@ -57,14 +56,11 @@
         left: 0;
         z-index: -1;
         transition: all .4s;
-        /* pseudoelements treated like a child of the original button
-        so 100% width is the 100% of the original button width */
     }
         
     &--animated {
         animation: moveInBottom 0.5s ease-out .75s;
         animation-fill-mode: backwards;
-        /*auto apply styles before animation starts*/
     }
 }
 
